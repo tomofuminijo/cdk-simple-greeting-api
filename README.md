@@ -76,7 +76,7 @@ curl -X GET https://xxxxxxxx.execute-api.ap-southeast-1.amazonaws.com/prod/hello
 以下のコマンドを実行することで、CFn スタックが削除されます。
 
 ```
-cdk destloy
+cdk destroy
 ```
 
 DynamoDB Table が残ったままになりますので、個別に手動で削除してください。

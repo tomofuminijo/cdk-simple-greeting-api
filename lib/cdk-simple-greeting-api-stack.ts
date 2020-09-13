@@ -9,9 +9,11 @@ export class CdkSimpleGreetingApiStack extends cdk.Stack {
 
     const table = new dynamodb.Table(this, "CDKDemoGreeting", {
       partitionKey: { name: "lang", type: dynamodb.AttributeType.STRING },
-    });
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      billingMode: dynamodb.BillingMode.PAY_PER_REQUEST
+      });
 
-    // defines an AWS Lambda resource
+    // defines AWS Lambda resources
     const myGreetingDynamoDBGetFunction = new lambda.Function(
       this,
       "MyGreetingDynamoDBGetFunction",

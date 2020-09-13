@@ -79,10 +79,3 @@ curl -X GET https://xxxxxxxx.execute-api.ap-southeast-1.amazonaws.com/prod/hello
 cdk destroy
 ```
 
-DynamoDB Table が残ったままになりますので、個別に手動で削除してください。
-以下のような名前のテーブルになります。
-
-
-```
-CdkSimpleGreetingApiStack-CDKDemoGreeting
-```
